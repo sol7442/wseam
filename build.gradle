@@ -4,3 +4,32 @@ buildscript {
 		maven {url "http://repo.mycompany.com/maven2"}
 	}
 }
+
+allprojects{
+	apply plugin: 'java'
+	
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+	
+	compileJava.options.encoding = 'UTF-8'
+
+	repositories {	
+		mavenCentral()
+		maven {url "http://repo.mycompany.com/maven2"}
+		
+	}
+}
+
+subprojects {
+	task initSubProjecctFolders {
+	    println(projectDir)
+	    if(!projectDir.exists()){
+	    	projectDir.mkdirs();
+	    }
+	}
+	dependencies {
+	    testImplementation 'junit:junit:4.12'
+	    compile group: 'org.codehaus.janino', name: 'janino', version: '3.0.8'
+		compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+	}
+}

@@ -1,1 +1,36 @@
 rootProject.name = 'wsscim'
+include "wsscim-cores"
+include "wsscim-cores:wsscim-core"
+include "wsscim-cores:wsscim-model"
+
+include "wsscim-runtimes"
+include "wsscim-runtimes:wsscim-deamon"
+include "wsscim-runtimes:wsscim-compiler"
+
+include "wsscim-containers"
+include "wsscim-containers:wsscim-container"
+
+include "wsscim-controllers"
+include "wsscim-controllers:wsscim-controller"
+include "wsscim-controllers:wsscim-spark"
+
+include "wsscim-services"
+include "wsscim-services:wsscim-service"
+
+include "wsscim-repositois"
+include "wsscim-repositois:wsscim-repository"
+include "wsscim-repositois:wsscim-hibernate"
+include "wsscim-repositois:wsscim-oracle"
+include "wsscim-repositois:wsscim-mysql"
+include "wsscim-repositois:wsscim-mssql"
+
+include "wsscim-samples"
+include "wsscim-samples:wsscim-provider"
+include "wsscim-samples:wsscim-consumer"
+include "wsscim-samples:wsscim-resource"
+
+include "wsscim-apis"
+include "wsscim-apis:wsscim-http-api"
+
+include "wsscim-tests"
+include "wsscim-tests:wsscim-test"
