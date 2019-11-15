@@ -1,0 +1,6 @@
+buildscript {
+	repositories {
+		mavenCentral()
+		maven {url "http://repo.mycompany.com/maven2"}
+	}
+}
