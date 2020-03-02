@@ -1,0 +1,9 @@
+version    	= '1.0.0'	
+dependencies {
+	//compile files('../../dist/wsscim-core-1.0.0.jar')
+	compile project(':wsscim-cores:wsscim-core')
+	compile project(':wsscim-cores:wsscim-json')
+	compile project(':wsscim-services:wsscim-common-service')
+	compile project(':wsscim-services:wsscim-scim-service')
+	compile project(':wsscim-repositois:wsscim-hibernate')
+}

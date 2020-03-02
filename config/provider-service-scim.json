@@ -1,0 +1,93 @@
+{
+  "name": "provider-scim-service",
+  "services": {
+    "SCIM_ORG": {
+      "path": "/scim/v2/Orgs",
+      "serviceClass": "com.wowsanta.scim.attribute.service.ScimOrgService",
+      "parsers": {
+        "ScimListResponse": "com.wowsanta.scim.json.WsScimListResponseJsonParser",
+        "ScimSearchRequest": "com.wowsanta.scim.json.WsScimSearchReqeustJsonParser",
+        "ScimOrg": "com.wowsanta.hibernate.scim.json.WsScimOrgJsonParser"
+      },
+      "binders": {
+        "ScimListResponse": "com.wowsanta.scim.json.WsScimListResponseJsonBinder",
+        "ScimSearchRequest": "com.wowsanta.scim.json.WsScimSearchReqeustJsonBinder",
+        "ScimOrg": "com.wowsanta.hibernate.scim.json.WsScimOrgJsonBinder"
+      },
+      "services": {
+        "read": {
+          "path": "/:id",
+          "method": "get",
+          "controlClass": "com.wowsanta.scim.attribute.control.OrgReadRoute"
+        },
+        "search_get": {
+          "method": "get",
+          "controlClass": "com.wowsanta.scim.attribute.control.OrgSearchGetRoute"
+        },
+        "replace": {
+          "path": "/:id",
+          "method": "put",
+          "controlClass": "com.wowsanta.scim.attribute.control.OrgReplaceRoute"
+        },
+        "create": {
+          "method": "post",
+          "controlClass": "com.wowsanta.scim.attribute.control.OrgCreateRoute"
+        },
+        "update": {
+          "path": "/:id",
+          "method": "patch",
+          "controlClass": "com.wowsanta.scim.attribute.control.OrgUpdateRoute"
+        },
+        "delete": {
+          "path": "/:id",
+          "method": "delete",
+          "controlClass": "com.wowsanta.scim.attribute.control.OrgDeleteRoute"
+        },
+        "search_post": {
+          "path": "/",
+          "method": "post",
+          "controlClass": "com.wowsanta.scim.attribute.control.OrgSearchPostRoute"
+        }
+      }
+    },
+    "SCIM_USER": {
+      "path": "/scim/v2/Users",
+      "parsers": {
+        "ScimUser": "com.wowsanta.hibernate.scim.json.WsScimUserJsonParser",
+        "ScimListResponse": "com.wowsanta.scim.json.WsScimListResponseJsonParser",
+        "ScimSearchRequest": "com.wowsanta.scim.json.WsScimSearchReqeustJsonParser"
+      },
+      "binders": {
+        "ScimUser": "com.wowsanta.hibernate.scim.json.WsScimUserJsonBinder",
+        "ScimListResponse": "com.wowsanta.scim.json.WsScimListResponseJsonBinder",
+        "ScimSearchRequest": "com.wowsanta.scim.json.WsScimSearchReqeustJsonBinder"
+      },
+      "services": {
+        "read": {
+          "path": "/:id",
+          "method": "get",
+          "controlClass": "com.wowsanta.scim.user.control.UserReadRoute"
+        },
+        "replace": {
+          "path": "/:id",
+          "method": "put",
+          "controlClass": "com.wowsanta.scim.user.control.UserReplaceRoute"
+        },
+        "create": {
+          "method": "post",
+          "controlClass": "com.wowsanta.scim.user.control.UserCreateRoute"
+        },
+        "delete": {
+          "path": "/:id",
+          "method": "delete",
+          "controlClass": "com.wowsanta.scim.user.control.UserDeleteRoute"
+        },
+        "search_post": {
+          "path": "/",
+          "method": "post",
+          "controlClass": "com.wowsanta.scim.user.control.UserSearchPostRoute"
+        }
+      }
+    }
+  }
+}

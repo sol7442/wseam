@@ -1,0 +1,10 @@
+{
+  "name": "provider-common-service",
+  "services": {
+    "SCIM_AUTHEN": {
+      "path": "/*",
+      "method": "before",
+      "controlClass": "com.wowsanta.scim.spark.common.AuthenticationFilter"
+    }
+  }
+}

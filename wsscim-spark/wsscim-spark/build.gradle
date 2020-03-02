@@ -1,0 +1,8 @@
+version    	= '1.0.0'	
+dependencies {
+	compile project(':wsscim-repositois:wsscim-repository')
+	compile project(':wsscim-services:wsscim-scim-service')
+	//compile project(':wsscim-apis:wsscim-http-api')
+	
+	compile group: 'com.sparkjava', name: 'spark-core', version: '2.8.0'
+}

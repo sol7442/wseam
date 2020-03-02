@@ -1,0 +1,18 @@
+[
+  {
+    "id": "sample1",
+    "meta": {
+      "resourceType": "USER",
+      "created": "2019-11-15T18:17:52.398Z",
+      "lastModified": "2019-11-15T18:17:52.398Z"
+    }
+  },
+  {
+    "id": "sample2",
+    "meta": {
+      "resourceType": "USER",
+      "created": "2019-11-15T18:17:52.398Z",
+      "lastModified": "2019-11-15T18:17:52.398Z"
+    }
+  }
+]

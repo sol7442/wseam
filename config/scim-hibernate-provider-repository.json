@@ -1,0 +1,7 @@
+{
+  "repositoryConfig": "../../config/scim-hibernate-provider-factory.json",
+  "repositoryFactoryClass": "com.wowsanta.scim.hibernate.HibernateRepositoryFactory",
+  "entites": [
+    "../../config/provider-entity-scim.json"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "services": {
+    "SCIM_AUTHEN": {
+      "name": "SCIM_AUTHEN",
+      "method": "before",
+      "path": "/*",
+      "implClassName": "com.wowsanta.scim.spark.common.AuthenticationFilter"
+    },
+    "SCIM_ORG": {
+      "name": "SCIM_ORG",
+      "parseClassName": "com.wowsanta.scim.hibernate.basic.WsScimOrgJsonAdapter",
+      "bindClassName": "com.wowsanta.scim.hibernate.basic.WsScimOrgJsonAdapter",
+      "entityClassName": "com.wowsanta.scim.hibernate.basic.WsScimOrg",
+      "path": "/scim/v2/Orgs",
+      "serviceClassName": "com.wowsanta.scim.service.scim.ScimOrgService",
+      "subMap": {
+        "get": {
+          "method": "get",
+          "path": "/:id",
+          "implClassName": "com.wowsanta.scim.spark.scim.attribute.OrgGetRoute"
+        },
+        "create": {
+          "method": "post",
+          "path": "",
+          "implClassName": "com.wowsanta.scim.spark.scim.attribute.OrgPostRoute"
+        },
+        "search": {
+          "method": "get",
+          "path": "",
+          "implClassName": "com.wowsanta.scim.spark.scim.attribute.OrgSearchRoute"
+        },
+        "delete": {
+          "method": "delete",
+          "path": "/:id",
+          "implClassName": "com.wowsanta.scim.spark.scim.attribute.OrgDeleteRoute"
+        },
+        "update": {
+          "method": "put",
+          "path": "/",
+          "implClassName": "com.wowsanta.scim.spark.scim.attribute.OrgPutRoute",
+          "serviceClassName": "com.wowsanta.scim.service.scim.ScimOrgService"
+        }
+      }
+    },
+    "SCIM_BULK": {
+      "name": "SCIM_BULK",
+      "parseClassName": "",
+      "bindClassName": "",
+      "method": "post",
+      "path": "/scim/v2/Bulk",
+      "implClassName": "com.wowsanta.scim.spark.scim.bulk.BulkPostRoute"
+    },
+    "SCIM_USER": {
+      "name": "SCIM_USER",
+      "parseClassName": "",
+      "bindClassName": "",
+      "path": "/scim/v2/Users",
+      "subMap": {
+        "post": {
+          "method": "post",
+          "path": "",
+          "implClassName": "com.wowsanta.scim.spark.scim.user.UserPostRoute"
+        },
+        "get": {
+          "method": "get",
+          "path": "",
+          "implClassName": "com.wowsanta.scim.spark.scim.user.UserSearchRoute"
+        },
+        "delete": {
+          "method": "delete",
+          "path": "/:id",
+          "implClassName": "com.wowsanta.scim.spark.scim.user.UserDeleteRoute"
+        },
+        "put": {
+          "method": "put",
+          "path": "/:id",
+          "implClassName": "com.wowsanta.scim.spark.scim.user.UserPutRoute"
+        }
+      }
+    },
+    "SCIM_GROUP": {
+      "name": "SCIM_GROUP",
+      "parseClassName": "",
+      "bindClassName": "",
+      "path": "/scim/v2/Groups",
+      "subMap": {
+        "post": {
+          "method": "post",
+          "path": "",
+          "implClassName": "com.wowsanta.scim.spark.scim.group.GroupPostRoute"
+        },
+        "get": {
+          "method": "get",
+          "path": "",
+          "implClassName": "com.wowsanta.scim.spark.scim.group.GroupSearchRoute",
+          "subMap": {}
+        },
+        "delete": {
+          "method": "delete",
+          "path": "/:id",
+          "implClassName": "com.wowsanta.scim.spark.scim.group.GroupDeleteRoute"
+        },
+        "put": {
+          "method": "put",
+          "path": "/:id",
+          "implClassName": "com.wowsanta.scim.spark.scim.group.GroupPutRoute"
+        }
+      }
+    }
+  }
+}

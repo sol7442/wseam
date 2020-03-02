@@ -1,0 +1,17 @@
+version    	= '1.0.0'	
+subprojects {
+	task initSubSrcFolders {
+	    sourceSets*.java.srcDirs*.each {
+	    	println(it)
+	        if( !it.exists() ) {
+	            it.mkdirs()
+	        }
+	    }
+	  
+	    sourceSets*.resources.srcDirs*.each {
+	        if( !it.exists() ) {
+	            it.mkdirs()
+	        }
+	    }
+	}
+}

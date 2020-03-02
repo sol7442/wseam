@@ -1,0 +1,35 @@
+{
+  "ATTRIBUTE": {
+    "entityClassName": "com.wowsanta.scim.hibernate.model.WsScimAttribute",
+    "repositoryClassName": "com.wowsanta.scim.repository.jpa.HibernateRepository",
+    "jsonClassName": "com.wowsanta.scim.hibernate.json.WsAttributeJsonAdapter",
+    "refDataInfo": [
+      "ORG",
+      "POS",
+      "JOB"
+    ]
+  },
+  "ORG": {
+    "entityClassName": "com.wowsanta.scim.hibernate.model.WsScimOrg",
+    "repositoryClassName": "com.wowsanta.scim.repository.jpa.HibernateRepository",
+    "jsonClassName": "com.wowsanta.scim.hibernate.json.WsPosJsonAdapter"
+  },
+  "POS": {
+    "entityClassName": "com.wowsanta.scim.hibernate.model.WsScimAttribute",
+    "repositoryClassName": "com.wowsanta.scim.repository.jpa.HibernateRepository",
+    "jsonClassName": "com.wowsanta.scim.hibernate.json.WsAttributeJsonAdapter"
+  },
+  "USER": {
+    "entityClassName": "com.wowsanta.scim.hibernate.model.WsScimUser",
+    "repositoryClassName": "com.wowsanta.scim.repository.jpa.HibernateRepository",
+    "jsonClassName": "com.wowsanta.scim.hibernate.json.WsUserJsonAdapter",
+    "refDataInfo": [
+      "ATTRIBUTE"
+    ]
+  },
+  "JOB": {
+    "entityClassName": "com.wowsanta.scim.hibernate.model.WsScimAttribute",
+    "repositoryClassName": "com.wowsanta.scim.repository.jpa.HibernateRepository",
+    "jsonClassName": "com.wowsanta.scim.hibernate.json.WsAttributeJsonAdapter"
+  }
+}

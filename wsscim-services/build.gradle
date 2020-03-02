@@ -15,8 +15,6 @@ subprojects {
 	    }
 	}
 	dependencies {
-	    testImplementation 'junit:junit:4.12'
-	    compile group: 'org.codehaus.janino', name: 'janino', version: '3.0.8'
-		compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
 	}
 }

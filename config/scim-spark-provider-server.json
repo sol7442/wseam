@@ -1,0 +1,11 @@
+{
+  "port": 5000,
+  "maxThreads": 10,
+  "minThreads": 5,
+  "idleTimeoutMillis": 1000,
+  "repository": "../../config/scim-hibernate-provider-repository.json",
+  "services": [
+    "COMMON_SERVICE",
+    "SCIM_PROVIDER_SERVICE"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "provider-scim-entity",
+  "entitis": {
+    "SCIM_ORG": {
+      "entityClass": "com.wowsanta.hibernate.scim.model.WsScimOrg",
+      "repositoryClass": "com.wowsanta.hibernate.scim.repository.WsScimOrgRepository"
+    },
+    "SCIM_USER": {
+      "entityClass": "com.wowsanta.hibernate.scim.model.WsScimUser",
+      "repositoryClass": "com.wowsanta.hibernate.scim.repository.WsScimUserRepository"
+    }
+  }
+}

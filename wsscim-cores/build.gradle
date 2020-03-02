@@ -1,0 +1,22 @@
+jar {
+    version =  '1.0.0'
+}
+
+task copyJar(group:build, type: Copy) {
+    from jar
+    into '../../dist'
+}
+	
+subprojects {
+	task initSubSrcFolders {
+	    sourceSets*.java.srcDirs*.each {
+	    	println(it)
+	        if( !it.exists() ) {
+	            it.mkdirs()
+	        }
+	    }
+	}
+	dependencies {
+
+	}
+}

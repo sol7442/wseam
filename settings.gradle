@@ -1,36 +1,84 @@
 rootProject.name = 'wsscim'
+
 include "wsscim-cores"
 include "wsscim-cores:wsscim-core"
-include "wsscim-cores:wsscim-model"
+include "wsscim-cores:wsscim-json"
+
+include "wsscim-services"
+include "wsscim-services:wsscim-service"
+//include "wsscim-services:wsscim-service-common"
+//include "wsscim-services:wsscim-service-scim"
+
+include "wsscim-services:wsscim-common-service"
+include "wsscim-services:wsscim-scim-service"
+include "wsscim-services:wsscim-provider-service"
+include "wsscim-services:wsscim-admin-service"
+
+include "wsscim-repositois"
+include "wsscim-repositois:wsscim-repository"
+include "wsscim-repositois:wsscim-hibernate"
+
+/*
+include "wsscim-services:wsscim-scim-provider"
+include "wsscim-services:wsscim-scim-consumer"
+include "wsscim-services:wsscim-scim-resource"
+include "wsscim-services:wsscim-admin"
+include "wsscim-services:wsscim-scheduler"
+include "wsscim-services:wsscim-policy"
+include "wsscim-services:wsscim-resource"
+include "wsscim-services:wsscim-history"
+include "wsscim-services:wsscim-audit"
+include "wsscim-services:wsscim-backup"
+include "wsscim-services:wsscim-config"
+*/
+
+
+/*
+include "wsscim-services:wsscim-service-password"
+include "wsscim-services:wsscim-service-approval"
+include "wsscim-services:wsscim-service-self"
+
+*/
+
+
+//include "wsscim-repositois:wsscim-model-hibernate"
+/*
+include "wsscim-repositois:wsscim-oracle"
+include "wsscim-repositois:wsscim-mysql"
+include "wsscim-repositois:wsscim-mssql"
+*/
+
+include "wsscim-spark"
+include "wsscim-spark:wsscim-spark"
+
+
+include "wsscim-samples"
+include "wsscim-samples:wsscim-sample-provider-spark-hibernate"
+include "wsscim-samples:wsscim-sample-consumer-spark-hibernate"
+include "wsscim-samples:wsscim-sample-resource-spark-hibernate"
+
 
 include "wsscim-runtimes"
 include "wsscim-runtimes:wsscim-deamon"
 include "wsscim-runtimes:wsscim-compiler"
 
-include "wsscim-containers"
-include "wsscim-containers:wsscim-container"
+/*
+include "wsscim-samples:wsscim-sample-provider-spark-mysql"
+include "wsscim-samples:wsscim-sample-consumer-spark-mysql"
+include "wsscim-samples:wsscim-sample-resource-spark-mysql"
 
-include "wsscim-controllers"
-include "wsscim-controllers:wsscim-controller"
-include "wsscim-controllers:wsscim-spark"
-
-include "wsscim-services"
-include "wsscim-services:wsscim-service"
-
-include "wsscim-repositois"
-include "wsscim-repositois:wsscim-repository"
-include "wsscim-repositois:wsscim-hibernate"
-include "wsscim-repositois:wsscim-oracle"
-include "wsscim-repositois:wsscim-mysql"
-include "wsscim-repositois:wsscim-mssql"
-
-include "wsscim-samples"
-include "wsscim-samples:wsscim-provider"
-include "wsscim-samples:wsscim-consumer"
-include "wsscim-samples:wsscim-resource"
+include "wsscim-samples:wsscim-sample-provider-spark-oracle"
+include "wsscim-samples:wsscim-sample-consumer-spark-oracle"
+include "wsscim-samples:wsscim-sample-resource-spark-oracle"
+*/
 
 include "wsscim-apis"
 include "wsscim-apis:wsscim-http-api"
 
 include "wsscim-tests"
 include "wsscim-tests:wsscim-test"
+
+
+
+
+

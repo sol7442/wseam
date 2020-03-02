@@ -1,0 +1,10 @@
+{
+  "driver": "com.mysql.cj.jdbc.Driver",
+  "url": "jdbc:mysql://wession.com:3306/ws_scim_v1?useUnicode=true&serverTimezone=UTC",
+  "user": "root",
+  "pass": "wession@12",
+  "dialect": "org.hibernate.dialect.MySQL5InnoDBDialect",
+  "showsql": "true",
+  "formatsql": "true",
+  "hbm2ddlauto": "update"
+}

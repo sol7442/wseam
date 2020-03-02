@@ -1,0 +1,16 @@
+jar {
+	version =  '1.0.0';
+}
+
+task copyJar(group:'copy', type: Copy) {
+    from jar
+    into '../../dist'
+}
+
+
+dependencies {
+	compile project(':wsscim-cores:wsscim-core')
+	compile project(':wsscim-cores:wsscim-json')
+	compile project(':wsscim-services:wsscim-service')
+    compile group: 'com.sparkjava', name: 'spark-core', version: '2.8.0'
+}

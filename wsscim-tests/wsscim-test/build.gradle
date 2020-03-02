@@ -1,0 +1,31 @@
+version    	= '1.0.0'	
+
+task copyRuntimeLibs(type: Copy,group:'Build Setup', description : 'Copy Depends Library') {
+    from configurations.runtime
+    into "../../libs/"
+}
+
+dependencies {
+	//compile files('../../dist/wsscim-common-service-1.0.0.jar')
+	//compile files('../../dist/wsscim-provider-service-1.0.0.jar')
+	compile group: 'org.quartz-scheduler', name: 'quartz', version: '2.3.0'
+	compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.5.0'
+	
+	compile project(':wsscim-spark:wsscim-spark')
+	compile project(':wsscim-apis:wsscim-http-api')
+	compile project(':wsscim-repositois:wsscim-hibernate')
+	
+	compile project(':wsscim-services:wsscim-scim-service')
+	compile project(':wsscim-services:wsscim-provider-service')
+	compile project(':wsscim-services:wsscim-common-service')
+	
+	compile project(':wsscim-samples:wsscim-sample-provider-spark-hibernate')
+	compile project(':wsscim-samples:wsscim-sample-consumer-spark-hibernate')
+	compile project(':wsscim-samples:wsscim-sample-resource-spark-hibernate')
+	
+	
+	//compile project(':wsscim-controllers:wsscim-provider')
+	//compile project(':wsscim-cores:wsscim-model')
+	//compile project(':wsscim-repositois:wsscim-hibernate')
+	//compile project(':wsscim-repositois:wsscim-model-hibernate')
+}

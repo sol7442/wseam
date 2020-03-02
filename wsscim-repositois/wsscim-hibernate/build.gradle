@@ -1,0 +1,7 @@
+version    	= '1.0.0'	
+dependencies {
+	compile project(':wsscim-services:wsscim-service')
+	compile project(':wsscim-repositois:wsscim-repository')
+	
+	compile group: 'org.hibernate', name: 'hibernate-gradle-plugin', version: '5.3.11.Final'
+}
